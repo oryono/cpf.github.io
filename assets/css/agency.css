@@ -3,6 +3,10 @@ body {
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.overlay{
+  background-color: black;
+}
+
 #about {
   padding: 150px 0 0 0;
   background-color: #44aaee;
@@ -15,6 +19,10 @@ p {
 #about a {
   text-decoration: underline;
   color: black;
+}
+
+#about h5, h4 {
+    color: #ccc;
 }
 
 #gallery{
@@ -188,14 +196,15 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../../img/IMG_20161121_134948.jpg");
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  /*background-attachment: scroll;*/
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: #FFFFFF
 }
 
 header.masthead .intro-text {
