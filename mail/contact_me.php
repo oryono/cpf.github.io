@@ -1,6 +1,15 @@
 <?php
 
 require '../vendor/autoload.php';
+//die($_SERVER['DOCUMENT_ROOT']);
+
+$dotenv = new Dotenv\Dotenv($_SERVER['DOCUMENT_ROOT']);
+$dotenv->load();
+
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
+
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
@@ -25,7 +34,7 @@ $headers = "From: noreply@yourdomain.com\n"; // This is the email address the ge
 $headers .= "Reply-To: $email_address";   
 //mail($to,$email_subject,$email_body,$headers);
 
-$sendgrid = new SendGrid("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");
+$sendgrid = new SendGrid(getenv('SG_API_KEY'));
 $email    = new SendGrid\Email();
 
 $email->addTo($to)

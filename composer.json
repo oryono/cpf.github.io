@@ -1,5 +1,7 @@
 {
     "require": {
-        "sendgrid/sendgrid": "~3.2"
+        "sendgrid/sendgrid": "~3.2",
+        "vlucas/phpdotenv": "^2.4",
+        "filp/whoops": "^2.1"
     }
 }
